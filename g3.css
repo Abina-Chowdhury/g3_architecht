@@ -17,6 +17,13 @@ font-size: 1.25rem;
 cursor: pointer;
 border: 0px;
 }
+
+section-title{
+    font-size: 2.8rem;
+    text-align: left;
+    font-weight: 700;
+    color: #131313;
+}
 /* hedaer styles */
 header{
     background: rgba(255, 144, 14, 0.10);
@@ -29,12 +36,7 @@ nav{
     align-items: center;
 }
 
-nav-title{
-    font-size: 2.8rem;
-    text-align: left;
-    font-weight: 700;
-    color: #131313;
-}
+
 nav > ul{
     display: flex;
 }
@@ -108,7 +110,46 @@ color: #727272;
     color: #ff900e;
     font-weight: 700;
    }
+/* facts section */
 
+.facts-card-container{
+display: flex;
+justify-content: space-around;
+}
+.facts-card-container  .card{
+border-radius: 8px;
+border: 1px solid #ff900e;
+text-align: center;
+padding:  30px;
+}
+
+.facts-card-container .card-title{
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 5px;
+    }
+
+.facts-card-container .card-stats{
+    font-size: 2.8rem;
+    color: #424242;
+    margin-top: 10px ;
+    margin-bottom: 10px;
+}
+
+/* sponsors style */
+.sponsors{
+    text-align: center;
+}
+.sponsors-img-container{
+display: flex;
+justify-content: space-evenly;
+margin-top: 50px;
+align-items: center;
+gap: 40px;
+}
+.sponsors-img-container  img{
+width: 165px;
+}
 
 
    /* responsive media quries */
@@ -117,12 +158,21 @@ color: #727272;
     header{
        padding: 20px;
     }   
-    nav, .teams-container{
+    nav, .teams-container,.facts-card-container, .sponsors-img-container{
        flex-direction: column;
     }
 
     .teams-img-container{
 grid-template-columns: 1fr;
+    }
+
+    .teams-content,  .facts-card-container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+     .facts-card-container{
+            gap: 20px ;
     }
    }
    
@@ -132,15 +182,13 @@ grid-template-columns: 1fr;
        header{
           padding: 50px;
        }   
-       nav, .teams-container{
+       nav, .teams-container , .sponsors-img-container {
           flex-direction: column;
        }
        /* .teams-img-container{
         grid-template-columns: 1fr;
             } */
-            .teams-content{
-                padding-left: 20px;
-                padding-right: 20px;
-            }
+           
+           
       }
    
